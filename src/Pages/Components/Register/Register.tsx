@@ -25,7 +25,7 @@ function Register() {
   return (
     <>
       <div
-        className="grid grid-cols-1 xl:grid-cols-2 gap-6 bg-zinc-200  dark:bg-slate-700  pt-[80px] pb-[177px]"
+        className="grid grid-cols-1 px-3 xl:grid-cols-2 gap-6 bg-zinc-200  dark:bg-slate-700  pt-[80px] pb-[177px]"
         dir="rtl"
       >
         {/* تصویر */}
