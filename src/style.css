@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: general;
+}
+@font-face {
+  font-family: general;
+  src: url("../src/Pages/Fonts/IRANSansXFaNum-Regular.ttf");
+}
+.input {
+  @apply w-[40%] rounded-md h-[30px] mx-auto text-center p-3 outline-none  focus:ring-2 focus:ring-blue-600 text-gray-800 text-[14px];
+}
+.errorinput {
+  @apply mt-1 text-orange-700 text-[14px] dark:text-gray-300 ml-5;
+}
+
+.buttn {
+  @apply mt-5 inline-block  dark:bg-blue-700  dark:hover:bg-blue-900 bg-orange-600 hover:bg-orange-700 duration-700 px-6 py-2 rounded-xl text-white font-black text-sm w-full sm:w-[60px];
+}
+
+.products {
+  @apply grid grid-cols-6 gap-[30px] dark:bg-slate-800 bg-zinc-200 p-5 justify-center 
+         smd:grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6;
+}
