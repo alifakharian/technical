@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaRegMoon } from "react-icons/fa";
+import { FaBars, FaRegMoon, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import { useDarkmodecontext } from "../../Context/Darkmode";
 import { PiSunBold } from "react-icons/pi";
@@ -11,13 +11,12 @@ function Nav() {
   const navs = [
     { item: "خانه", link: "/" },
     { item: "محصولات", link: "/product" },
-    // { item: "درباره ما", link: "/about" },
-    // { item: "تماس با ما", link: "/contact" },
+    
   ];
   return (
     <>
       <div className="flex justify-between dark:text-white  flex-row-reverse items-center duration-500 dark:bg-slate-900 bg-gray-400 p-5 relative">
-        {/* دکمه منو (فقط در sm پایین‌تر) */}
+       
         <button
           className="sm:hidden text-2xl"
           onClick={() => setIsOpen(true)}
@@ -69,7 +68,7 @@ function Nav() {
 
         {/* منو در حالت موبایل (sm پایین‌تر) */}
         <div
-          className={`fixed top-0 right-0 h-full w-56 bg-gray-200 dark:bg-slate-800 shadow-lg transform transition-transform duration-300 ease-in-out
+          className={`fixed top-0 right-0 h-full w-56 bg-gray-200  z-10 dark:bg-slate-800 shadow-lg transform transition-transform duration-300 ease-in-out
           ${
             isOpen ? "translate-x-0" : "translate-x-full"
           } sm:hidden flex flex-col p-5`}
@@ -79,7 +78,7 @@ function Nav() {
             onClick={() => setIsOpen(false)}
             className="self-start mb-6 dark:bg-white p-2 text-xl rounded-full dark:text-gray-900"
           >
-            {/* <FaTimes /> */}
+            <FaTimes />
           </button>
 
           {/* آیتم‌های منو */}

@@ -19,9 +19,12 @@ function Singleproduct() {
     <>
       <div
         className=" grid grid-cols-1  md:grid-cols-2 dark:bg-slate-800 px-6 py-[105px]  bg-zinc-200 dark:text-white duration-700"
-        dir="rtl"
+        dir=""
       >
-        <div className=" px-4 dark:text-white bg-teal-6 flex flex-col justify-start mt-[25px]">
+        <div>
+          <Slider />
+        </div>
+        <div className=" px-4 dark:text-white flex flex-col justify-start mt-[25px]" dir="rtl">
           <div className="text-red-600 dark:text-white text-[20px] font-black">
             {data?.title}
           </div>
@@ -45,9 +48,6 @@ function Singleproduct() {
             <p>|</p>
             <FaPhoneAlt className="mt-1" />
           </Link>
-        </div>
-        <div>
-          <Slider />
         </div>
       </div>
     </>
