@@ -15,7 +15,7 @@ function Searchresult() {
   }
   return (
     <>
-      <div className="grid  dark:bg-slate-800 p-4  gap-4 smd:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
+      <div className="grid   dark:bg-slate-800 pb-[197px] p-[50px]   gap-4 smd:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
         {data && data.length > 0 ? (
           data.map((elem) => <Products elem={elem} key={elem.i} />)
         ) : (

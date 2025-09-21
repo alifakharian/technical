@@ -32,14 +32,13 @@ export const Showsingleproduct = (productId?: string) => {
 // show products by search title
 const ShowProductsByname = async (search: string): Promise<Tproduct[]> => {
   const res = await axiosInstance.get<Tproduct[]>("/Product");
-  const lowerSearch = search.toLowerCase();
   return res.data.filter((item) =>
-    item.name.toLowerCase().includes(lowerSearch)
+    item.name.toLowerCase().includes(search.toLowerCase())
   );
 };
 
 export const useProductsByName = (search: string) =>
   useQuery<Tproduct[]>({
-    queryKey: ["Product", search], // کش بر اساس search
+    queryKey: ["Product", search],
     queryFn: () => ShowProductsByname(search),
   });
